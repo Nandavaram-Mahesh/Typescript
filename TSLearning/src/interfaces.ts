@@ -44,6 +44,12 @@ enum AutomobileTypes {
     colors: Colors[];
     description: string;
   }
+
+  interface CommercialVehicle<Capacity>{
+    capacity:Capacity
+    licenseRenewalDate:Date
+  }
+
   
   const ferrari: Automobile<AutomobileTypes, AutomobileBrands, AutomobileColors> = {
     type: AutomobileTypes.car,
@@ -92,15 +98,15 @@ console.log(ferrariCar)
 
 
 
-class Truck implements Automobile<string, AutomobileBrands, AutomobileColors>{
+class Truck implements Automobile<string, AutomobileBrands, AutomobileColors>,CommercialVehicle<number>{
 
     public type:string = "Truck"
 
-    constructor(public brand:AutomobileBrands,public colors:AutomobileColors[], public description:string){}
+    constructor(public brand:AutomobileBrands,public colors:AutomobileColors[], public description:string, public capacity:number,public licenseRenewalDate:Date ){}
     
 }
 
 
-const toyotaTruck:Truck = new Truck(AutomobileBrands.toyota,[AutomobileColors.silver,AutomobileColors.black,AutomobileColors.red,AutomobileColors.blue],"This is toyota Truck")
+const toyotaTruck:Truck = new Truck(AutomobileBrands.toyota,[AutomobileColors.silver,AutomobileColors.black,AutomobileColors.red,AutomobileColors.blue],"This is toyota Truck" , 50000,new Date())
 
 console.log(toyotaTruck)

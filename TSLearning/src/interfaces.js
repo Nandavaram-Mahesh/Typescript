@@ -61,13 +61,15 @@ var Car = /** @class */ (function () {
 var ferrariCar = new Car(AutomobileBrands.ferrari, [AutomobileColors.black, AutomobileColors.red], "This is Ferrari");
 console.log(ferrariCar);
 var Truck = /** @class */ (function () {
-    function Truck(brand, colors, description) {
+    function Truck(brand, colors, description, capacity, licenseRenewalDate) {
         this.brand = brand;
         this.colors = colors;
         this.description = description;
+        this.capacity = capacity;
+        this.licenseRenewalDate = licenseRenewalDate;
         this.type = "Truck";
     }
     return Truck;
 }());
-var toyotaTruck = new Truck(AutomobileBrands.toyota, [AutomobileColors.silver, AutomobileColors.black, AutomobileColors.red, AutomobileColors.blue], "This is toyota Truck");
+var toyotaTruck = new Truck(AutomobileBrands.toyota, [AutomobileColors.silver, AutomobileColors.black, AutomobileColors.red, AutomobileColors.blue], "This is toyota Truck", 50000, new Date());
 console.log(toyotaTruck);
