@@ -60,3 +60,14 @@ var Car = /** @class */ (function () {
 }());
 var ferrariCar = new Car(AutomobileBrands.ferrari, [AutomobileColors.black, AutomobileColors.red], "This is Ferrari");
 console.log(ferrariCar);
+var Truck = /** @class */ (function () {
+    function Truck(brand, colors, description) {
+        this.brand = brand;
+        this.colors = colors;
+        this.description = description;
+        this.type = "Truck";
+    }
+    return Truck;
+}());
+var toyotaTruck = new Truck(AutomobileBrands.toyota, [AutomobileColors.silver, AutomobileColors.black, AutomobileColors.red, AutomobileColors.blue], "This is toyota Truck");
+console.log(toyotaTruck);

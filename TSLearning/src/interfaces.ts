@@ -87,3 +87,20 @@ class Car implements Automobile<string, AutomobileBrands, AutomobileColors>{
 const ferrariCar:Car= new Car(AutomobileBrands.ferrari,[AutomobileColors.black,AutomobileColors.red],"This is Ferrari")
 
 console.log(ferrariCar)
+
+
+
+
+
+class Truck implements Automobile<string, AutomobileBrands, AutomobileColors>{
+
+    public type:string = "Truck"
+
+    constructor(public brand:AutomobileBrands,public colors:AutomobileColors[], public description:string){}
+    
+}
+
+
+const toyotaTruck:Truck = new Truck(AutomobileBrands.toyota,[AutomobileColors.silver,AutomobileColors.black,AutomobileColors.red,AutomobileColors.blue],"This is toyota Truck")
+
+console.log(toyotaTruck)
