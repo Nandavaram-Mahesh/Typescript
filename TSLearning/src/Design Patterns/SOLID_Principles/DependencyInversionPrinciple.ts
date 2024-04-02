@@ -45,8 +45,8 @@ class HighLevelModule {
 
 
 
-let mongoDb = new MongoDBDatabase()
+let mongoDb:MongoDBDatabase = new MongoDBDatabase()
 
-let mongoDbData = new HighLevelModule(mongoDb)
+const regularUser:HighLevelModule = new HighLevelModule(mongoDb)
 
-mongoDbData.saveData("Welcom to MongoDb")
+regularUser.saveData("Hi Mahesh , Welcom to MongoDb")
