@@ -29,4 +29,5 @@ var user1 = new ConcretePrototype({
     email: "mahesh.nandavaram96@gmail.com"
 });
 var user2 = user1.clone();
+console.log(user2.getUserDetails());
 console.log(user1 === user2);

@@ -36,4 +36,6 @@ let user1 = new ConcretePrototype({
 
 let user2 = user1.clone()
 
+console.log(user2.getUserDetails())
+
 console.log(user1===user2)
