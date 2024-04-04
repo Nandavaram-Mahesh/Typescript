@@ -1,3 +1,4 @@
+
 interface ICustomerDetails{
     firstName:string;
     lastName:string;
@@ -20,7 +21,7 @@ class BCustomer implements ICustomerDetails{
     constructor(public firstName:string, public lastName:string, public email:string, public phoneNumber:string){}
 }
 
-
+// Construction of builder is happening here 
 class CustomerBuilder implements ICustomerBuilder{
 
     private firstName:string = ''
@@ -60,6 +61,7 @@ class CustomerBuilder implements ICustomerBuilder{
     }
 }
 
+// Director directs what to build
 class CustomerDirector{
     constructor(private builder:ICustomerBuilder){}
 
@@ -72,6 +74,8 @@ class CustomerDirector{
 }
 
 
+
+// Client Code
 const newBuilder:ICustomerBuilder = new CustomerBuilder()
 const newDirector:CustomerDirector = new CustomerDirector(newBuilder)
 const newCustomer:ICustomerDetails = newDirector.buildMinimalCustomer("Nandavaram","Mahesh","mahesh.nandavaram96@gmail.com")
