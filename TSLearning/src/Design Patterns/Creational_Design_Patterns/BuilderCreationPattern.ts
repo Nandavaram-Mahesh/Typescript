@@ -89,7 +89,12 @@ director.setBuilder(builder)
 
 director.buildMinimumProduct()
 
-const newProduct = builder.getProduct()
+const minimumProduct = builder.getProduct()
 
-console.log(newProduct)
+console.log(minimumProduct)
 
+director.buildFullProduct()
+
+const fullProduct = builder.getProduct()
+
+console.log(fullProduct)
