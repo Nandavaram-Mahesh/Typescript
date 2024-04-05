@@ -1,3 +1,6 @@
+// When ever we want to build a complex objects and build them in step by step then we can use builder pattern
+
+
 
 interface ICustomerDetails{
     firstName:string;
