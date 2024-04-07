@@ -35,9 +35,9 @@ class CredPayment extends PaymentProcessor{
 
 // Factory Class
 
-
+type paymentType = "stripe"|"paypal"|"cred"
 class PaymentProcessorFactory{
-    public createProcessor( type:"stripe"|"paypal"|"cred" ,  amount:number){
+    public createProcessor( type:paymentType ,  amount:number){
 
         switch(type){
             case "stripe":
